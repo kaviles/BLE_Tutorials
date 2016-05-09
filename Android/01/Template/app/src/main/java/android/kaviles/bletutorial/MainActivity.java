@@ -51,9 +51,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         ListView listView = new ListView(this);
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(this);
+        ((ScrollView) findViewById(R.id.scrollView)).addView(listView);
 
         btn_Scan = (Button) findViewById(R.id.btn_scan);
-        ((ScrollView) findViewById(R.id.scrollView)).addView(listView);
         findViewById(R.id.btn_scan).setOnClickListener(this);
     }
 
